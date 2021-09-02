@@ -1,3 +1,32 @@
+Lab 6- Demo6.Lab3
+	class DeptDAO {
+	List<Dept> list = new ArrayList<Dept>();
+
+	public void add(Dept d) {
+		list.add(d);
+	}
+
+	public List<Dept> list() {
+		return list;
+	}
+
+	public Optional<Dept> get(int deptno) {
+		for (Dept dept : list) {
+			if (dept.getDeptno() == deptno)
+				return Optional.of(dept);
+		}
+		return Optional.ofNullable(null);
+		}
+	}
+	How to invoke
+		Optional<Dept> d = dao.get(10);
+ 		if (d.isPresent())
+ 			System.out.println("Dept of 10 is " + d.get());
+ 		else
+			System.out.println("Department Not Found");
+	
+
+
 Lab 5 - Create demo6 project,
 	Lab1 - accept year, date and month from user and show as LocalDate
 	Lab2 - How to use JavaSCript engine in java code
