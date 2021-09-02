@@ -1,1 +1,0 @@
-Design code of an interface for DeptManager and EmpManager
