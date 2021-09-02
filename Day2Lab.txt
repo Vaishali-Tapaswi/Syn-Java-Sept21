@@ -1,3 +1,14 @@
+Lab 4 - Create Lab1.java (in demo5)
+	print date (from util)
+	javac -profile compact1 Lab1.java
+	modify lab1.java to create instance of java.sql.Date
+	and compile 
+		-check error 
+	
+	jdeps classname or . or package
+	
+Lab 3 - in demo5 folder (3 files)
+	NIO
 Lab 2 - Convert 
 		interface Calc {
 			int operation(int a, int b );
