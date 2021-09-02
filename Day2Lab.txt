@@ -1,3 +1,21 @@
+Lab 5 - Create demo6 project,
+	Lab1 - accept year, date and month from user and show as LocalDate
+	Lab2 - How to use JavaSCript engine in java code
+	import javax.script.ScriptEngine;
+	import javax.script.ScriptEngineManager;
+	import javax.script.ScriptException;
+
+	public class Lab2 {
+	public static void main(String[] args) throws ScriptException {
+	String script =  "print('Hello World !!')";
+	// create  t1.js file , load it and pass the content for eval
+	ScriptEngine engine = new  ScriptEngineManager().getEngineByName("nashorn");
+	 Object result = engine.eval(script);
+	  }
+}
+
+
+----------------------
 Lab 4 - Create Lab1.java (in demo5)
 	print date (from util)
 	javac -profile compact1 Lab1.java
