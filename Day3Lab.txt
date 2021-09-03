@@ -1,3 +1,32 @@
+import java.util.Comparator;
+import java.util.List;
+
+public class Lab4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Emp> list = EmpManager.getList(10);
+		   System.out.println("########## 1. Show All records ############");
+		   list.forEach(System.out::println);
+		//   list.stream().forEach(System.out::println);
+		   System.out.println("######### 2. Sorted - based on Ename  ##########");
+		   Comparator<Emp> salarycomp = (x,y)->Double.compare(x.getSalary(), y.getSalary());
+		    list.stream().sorted(salarycomp).forEach(System.out::println);
+		
+		   System.out.println("######### 2. Sorted - based on Salary ##########");
+		   list.stream().sorted((x,y)->x.getEname().compareToIgnoreCase(y.getEname())).forEach(System.out::println);
+		
+		
+		    System.out.println("######### 3. Show Emp with  Min Salary ##########");
+		
+		    System.out.println("######### 4. Show Emp with Project 'proj1' having Min Salary ##########");
+		
+		    System.out.println("######### 5. Show Emp with department as 'IT' and project as 'proj2' ##########");
+		    System.out.println("#########6. Number of employees in 'L&D' department ##########");
+	}
+}
+
+-----------------------
 Lab 3 - create a list of integers (fill 10 integers (random/static)
 	1. Show numbers
 	2. Sorted
