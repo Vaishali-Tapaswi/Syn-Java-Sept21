@@ -1,3 +1,21 @@
+Lab 10 - Collectors
+
+	public class Lab10 {
+		public static void main(String[] args) {
+			List<Emp> list = EmpManager.getList(20);
+			list.forEach(System.out::println);
+			System.out.println("########################");
+			list.stream().map(e -> e.getDept()).distinct().forEach(System.out::println);
+			System.out.println("Total number of departments " + list.stream().map(e -> e.getDept()).distinct().count());
+	// show table of departments , number of emps in the dept -> Map
+			Map<String, Long> map1 = list.stream().collect(Collectors.groupingBy(Emp::getDept, Collectors.counting()));
+			System.out.println(map1);
+			// show table of projects , sum of salaries -> Map
+			Map<String, Double> map2 = list.stream().collect(Collectors.groupingBy(Emp::getProject, Collectors.summingDouble(Emp::getSalary)));
+			System.out.println(map2);
+		}
+	}
+----------------------------------------
 Lab 9 = Sum of salaries for employees working in HR department
 	1. map, reduce
 -----------------------------------------
