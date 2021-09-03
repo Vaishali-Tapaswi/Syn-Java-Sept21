@@ -1,3 +1,27 @@
+Lab 11 - import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+import java.util.Scanner;
+
+public class Lab11 {
+
+	public static void main(String[] args) {
+		System.out.println("press a number to continue");
+		Scanner scanner = new Scanner(System.in);
+		scanner.nextInt();
+		int count = 1000;
+		List<Emp> list = EmpManager.getList(count);
+		long st = System.currentTimeMillis();
+		
+	    list.parallelStream().filter((empObj)-> empObj.getDept().equalsIgnoreCase("L&D")).forEach(e->System.out.print(e.getEmpno() + " "));
+		long et = System.currentTimeMillis();
+		System.out.println("\n\n\nTime Taken  = " + (et-st) + " for  " + count);
+	}
+}
+-----> change line 16 to stream vs parallelstream -> 
+	monitor using jvisualvm or jconsole
+	
+--------------------------------------
 Lab 10 - Collectors
 
 	public class Lab10 {
