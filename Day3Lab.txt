@@ -1,3 +1,25 @@
+Lab 9 = Sum of salaries for employees working in HR department
+	1. map, reduce
+-----------------------------------------
+Lab 8 - reduce
+	List<String> names = Arrays.asList("Anita", "Vaishali", "Sonali", "Simran", "Vishal", "Aman", "Shree", "Dyna");
+	System.out.println(names);
+	System.out.println("----------------");
+	Optional<String> str= names.stream().reduce((a,b)->a+b);
+	System.out.println(str.get());
+
+
+	List < Integer > numList = Arrays.asList(1, 4,5,10,20);
+	Optional<Integer> oint = numList.stream().reduce((a,b)->a+b);
+	System.out.println("Sum = " + oint.get());
+
+	Integer sum  = numList.stream().reduce(0,(a,b)->a+b);
+	System.out.println("Sum = " + sum);
+
+	Integer multi  = numList.stream().reduce(1,(a,b)->a*b);
+	System.out.println("Product = " + multi);
+
+----------------------------------------
 Lab 7 - map 
 	List<String> names=Arrays.asList("Anita","Vaishali","Sonali", "Simran","Vishal","Aman","Shree","Dyna");
 
