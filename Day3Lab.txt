@@ -1,0 +1,14 @@
+Lab1 - in demo7
+  Write code to create stream, check multiple access to same stream
+  Stream<String> strstream = Stream.of("Anita","Vaishali","Sonali", "Simran","Vishal","Aman","Shree","Dyna");
+		strstream.forEach(System.out::println);
+		System.out.println("----------------");
+	  strstream.forEach(System.out::println);
+   Line number 6 will give error, observe that error and then modify code to 
+    declare list 
+      List<String> names=Arrays.asList("Anita","Vaishali","Sonali", "Simran","Vishal","Aman","Shree","Dyna");
+		and get stream from list
+      names.stream().foreach
+    invoke multiple times
+    
+      
