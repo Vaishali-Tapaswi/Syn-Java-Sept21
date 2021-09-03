@@ -1,3 +1,28 @@
+Lab 6 - Pagenation
+	Stream<T> skip(long n) 
+	Stream<T>	limit(long maxSize)
+	100 records, show 1..10 and then accept N or P from user
+--------------------------------------------
+Lab 5- 
+// TODO Auto-generated method stub
+		List<Emp> list = EmpManager.getList(20);
+		Optional<Emp> empop = list.stream().findAny();
+		System.out.println(empop.get());
+		System.out.println("\n\n");
+    	empop=	 list.stream()
+			.peek(e->System.out.println("before filter " + e))
+			.filter((e)->e.getProject().equals("proj1"))
+			.findAny();
+		System.out.println("proj1 findany " +  empop.get());
+		System.out.println("\n\n");
+	    		boolean ans = list.stream()
+				.peek(e->System.out.println("before filter " + e))
+				.anyMatch((e)->e.getEname().equals("Vaishali") && e.getDept().equals("Sales"));
+		System.out.println("Vaishali in FIn department is available : " + ans);
+	}
+--------------------------------------------
+Lab 4 
+
 import java.util.Comparator;
 import java.util.List;
 
