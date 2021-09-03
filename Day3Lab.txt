@@ -1,3 +1,19 @@
+Lab 7 - map 
+	List<String> names=Arrays.asList("Anita","Vaishali","Sonali", "Simran","Vishal","Aman","Shree","Dyna");
+
+	names.stream().forEach(System.out::println);
+	System.out.println("----------------");
+//	<R> Stream<R> map(Function<? super T,? extends R> mapper)
+	names.stream().map(str -> str.toUpperCase()).forEach(System.out::println);
+
+	names.stream().map(str->str.length()).forEach(System.out::println);
+
+	List<Integer> lengthofnames = names.stream().map(str->str.length()).collect(Collectors.toList());
+	System.out.println(names);
+	System.out.println(lengthofnames);
+
+Create a list of String where each string contains empno,ename,salary in concatenated form
+-------------------------------------------
 Lab 6 - Pagenation
 	Stream<T> skip(long n) 
 	Stream<T>	limit(long maxSize)
